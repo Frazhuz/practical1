@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="GeoEngine.Tests/GeoEngine.Tests.csproj" />
+  <Project Path="GeoEngine/GeoEngine.csproj" />
+</Solution>
