@@ -1,7 +1,3 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
 namespace GeoEngine;
 
 public class Vector
@@ -28,8 +24,10 @@ public class Vector
 
     public override bool Equals(object? obj)
     {
-        if (obj is not Vector other) return false;
-        return X.Equals(other.X) && Y.Equals(other.Y) && Z.Equals(other.Z);
+        return obj is Vector other &&
+               X.Equals(other.X) &&
+               Y.Equals(other.Y) &&
+               Z.Equals(other.Z);
     }
 
     public override int GetHashCode()
@@ -42,5 +40,3 @@ public class Vector
         return $"[{X}, {Y}, {Z}]";
     }
 }
-
-

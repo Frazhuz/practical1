@@ -1,7 +1,3 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
 namespace GeoEngine;
 
 public class Point
@@ -19,8 +15,10 @@ public class Point
 
     public override bool Equals(object? obj)
     {
-        if (obj is not Point other) return false;
-        return X.Equals(other.X) && Y.Equals(other.Y) && Z.Equals(other.Z);
+        return obj is Point other &&
+               X.Equals(other.X) &&
+               Y.Equals(other.Y) &&
+               Z.Equals(other.Z);
     }
 
     public override int GetHashCode()
@@ -33,4 +31,3 @@ public class Point
         return $"({X}, {Y}, {Z})";
     }
 }
-
